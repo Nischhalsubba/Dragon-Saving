@@ -1,14 +1,18 @@
 {
-  "name": "scss-utilities",
+  "name": "dragon-saving",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {},
+  "description": "**Front-end Boilerplate using Sass and Gulp 4**",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2"
+  },
   "devDependencies": {
     "autoprefixer": "^9.6.0",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^8.0.0",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
@@ -20,15 +24,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Nischhalsubba/sassUtilities.git"
+    "url": "git+https://github.com/Nischhalsubba/Dragon-Saving.git"
   },
-  "keywords": [
-    "scssUtilities"
-  ],
-  "author": "Nischhal Raj Subba",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Nischhalsubba/sassUtilities/issues"
+    "url": "https://github.com/Nischhalsubba/Dragon-Saving/issues"
   },
-  "homepage": "https://github.com/Nischhalsubba/sassUtilities#readme"
+  "homepage": "https://github.com/Nischhalsubba/Dragon-Saving#readme"
 }

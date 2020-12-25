@@ -1,5 +1,5 @@
+"use strict";
 // Initailize Modules
-
 const {
     src,
     dest,
@@ -15,10 +15,14 @@ var replace = require('gulp-replace');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
+const imagemin = require("gulp-imagemin");
+const browsersync = require("browser-sync").create();
+
 // File path variables
 const files = {
     scssPath: './assets/sass/**/*.scss',
-    jsPath: './assets/js/**/*.js'
+    jsPath: './assets/js/**/*.js',
+    imgPath: './assets/Images/**'
 }
 
 // sass task
@@ -28,7 +32,7 @@ function scssTask() {
         .pipe(sass())
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(sourcemaps.write('.'))
-        .pipe(dest('./'));
+        .pipe(dest('./dest/css/'));
 }
 
 // JS task
@@ -39,6 +43,44 @@ function jsTask() {
         .pipe(dest('./js/'));
 }
 
+// BrowserSync
+function browserSync(done) {
+    browsersync.init({
+        server: {
+            baseDir: "./"
+        },
+        port: 3000
+    });
+    done();
+}
+
+// BrowserSync Reload
+function browserSyncReload(done) {
+    browsersync.reload();
+    done();
+}
+
+// Optimize Images
+function images() {
+    return src(files.imgPath)
+        .pipe(
+            imagemin([
+                imagemin.gifsicle({
+                    interlaced: true
+                }),
+                imagemin.optipng({
+                    optimizationLevel: 5
+                }),
+                imagemin.svgo({
+                    plugins: [{
+                        removeViewBox: false,
+                        collapseGroups: true
+                    }]
+                })
+            ])
+        )
+        .pipe(dest("./dest/Images/"));
+}
 
 // cachebusting task
 const cbString = new Date().getTime();
@@ -52,8 +94,8 @@ function cacheBustTask() {
 
 // watch task
 function watchTasks() {
-    watch([files.scssPath, files.jsPath],
-        parallel(scssTask, jsTask)
+    watch([files.scssPath, files.jsPath,files.imgPath],
+        parallel(scssTask, jsTask,images,images)
     );
 }
 
@@ -61,5 +103,6 @@ function watchTasks() {
 exports.default = series(
     parallel(scssTask, jsTask),
     cacheBustTask,
-    watchTasks
+    watchTasks,
+    images,
 )

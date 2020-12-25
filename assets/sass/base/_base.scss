@@ -45,24 +45,34 @@ img {
 table {
     margin: 0;
 
-    td,th{
+    td,
+    th {
         padding: 12px 15px;
         border-bottom: 1px solid $color-background-hr;
         text-align: left;
     }
 }
 
-code{
+code {
     margin: 0 .2rem;
     background: $color-background-hr;
     border-radius: 4px;
     display: block;
 }
 
-img{
+img {
     display: block;
 
     // Can be changed
     width: 100%;
     object-fit: contain;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }

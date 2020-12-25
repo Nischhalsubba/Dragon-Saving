@@ -1,0 +1,15 @@
+.nav {
+  &_container {
+    display: flex;
+    justify-content: space-between;
+
+    .nav_item {
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid red;
+      padding: 8px 16px;
+      font-size: 14px;
+      background-color: $gray;
+    }
+  }
+}

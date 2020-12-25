@@ -1,0 +1,18 @@
+.header {
+  &_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_left {
+      width: 30%;
+    }
+
+    &_right {
+      margin: 0;
+      padding: 0;
+      line-height: 14px;
+    }
+  }
+
+}
