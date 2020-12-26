@@ -45,6 +45,15 @@
 @import "layout/sidebar";
 
 /*--------------------------------------------------------------
+# Image Carousel
+--------------------------------------------------------------*/
+// Required Core Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+/*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
 // @import "layout/media-queries";
