@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 14px;
 
     &_left {
       width: 30%;
@@ -10,8 +11,16 @@
 
     &_right {
       margin: 0;
-      padding: 0;
+      padding: 6px 12px;
       line-height: 14px;
+      border: 1px solid #FBAC26;
+      box-sizing: border-box;
+      border-radius: 4px;
+
+      p {
+        font-size: 14px;
+        line-height: 10px;
+      }
     }
   }
 

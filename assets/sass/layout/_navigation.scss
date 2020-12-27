@@ -2,14 +2,19 @@
   &_container {
     display: flex;
     justify-content: space-between;
+    background-color: #C4C4C4;
 
     .nav_item {
       text-decoration: none;
       font-weight: bold;
-      border: 1px solid red;
-      padding: 8px 16px;
+      padding: 14px 28px;
       font-size: 14px;
       background-color: $gray;
+      color: $white;
+
+      &:hover {
+        background-color: $primary;
+      }
     }
   }
 }
