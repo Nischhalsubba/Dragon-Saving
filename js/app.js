@@ -1,1 +1,1 @@
-var glideService=new Glide(".glideservice",{type:"carousel",autoplay:3500,perView:3});glideService.mount();
+var glideService=new Glide(".glideservice",{type:"carousel",autoplay:3500,perView:3}),glideadvertisement=new Glide(".glideadvertisement",{type:"carousel",autoplay:3500,perView:1});glideService.mount(),glideadvertisement.mount();

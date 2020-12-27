@@ -133,3 +133,42 @@
     bottom: -2rem !important;
   }
 }
+
+// Advertisement 
+.advertisement {
+  // max-height: 400px;
+  overflow: hidden;
+
+  img {
+    max-height: 400px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+}
+
+
+// Current Offer
+.currentOffer {
+  display: flex;
+
+  &_box {
+    img {
+      width: 500px;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .title {
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 24px;
+      margin-bottom: 0px;
+    }
+
+    .content {
+      font-size: 16px;
+      line-height: 28px;
+      color: $light_blue;
+    }
+  }
+}

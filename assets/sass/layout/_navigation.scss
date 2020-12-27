@@ -18,3 +18,55 @@
     }
   }
 }
+
+// Dropdown navigation
+.dropdown {
+  float: left;
+  overflow: hidden;
+
+  .dropbtn {
+    border: none;
+    outline: none;
+    margin: 0;
+  }
+
+  &:hover {
+    .dropbtn {
+      background-color: red;
+    }
+
+    .dropdown-content {
+      display: block;
+    }
+  }
+}
+
+.navbar {
+  a {
+    &:hover {
+      background-color: red;
+    }
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+}
