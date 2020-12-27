@@ -14,7 +14,8 @@ const postcss = require('gulp-postcss');
 var replace = require('gulp-replace');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
-const uglify = require('gulp-uglify');
+// const uglify = require('gulp-uglify');
+const terser = require ('gulp-terser');
 const imagemin = require("gulp-imagemin");
 const browsersync = require("browser-sync").create();
 
@@ -39,7 +40,7 @@ function scssTask() {
 function jsTask() {
     return src(files.jsPath)
         .pipe(concat('app.js'))
-        .pipe(uglify())
+        .pipe(terser())
         .pipe(dest('./js/'));
 }
 

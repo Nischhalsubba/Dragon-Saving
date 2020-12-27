@@ -4,6 +4,11 @@ html {
     box-sizing: border-box;
 }
 
+::selection {
+    color: darken($accent, 20%);
+    background-color: $accent
+}
+
 *,
 *::before,
 *::after {
@@ -101,11 +106,18 @@ img {
 
 
 // Glide Js overwrite
+.glide__slides {
+    .glide__link {
+        text-decoration: none !important;
+    }
+}
+
 .glide__arrow {
 
     width: 32px !important;
     height: 32px !important;
-    background-color: rgba(0, 0, 0, 0.5) !important;
+    // background-color: rgba(0, 0, 0, 0.5) !important;
+    background-color: $accent !important;
     border-radius: 50% !important;
     border: none !important;
     display: flex;
@@ -117,7 +129,7 @@ img {
     }
 
     &:hover {
-        background-color: rgba(0, 0, 0, 0.8) !important;
+        background-color: darken($accent, 20%) !important;
 
     }
 

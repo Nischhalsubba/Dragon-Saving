@@ -6,7 +6,8 @@
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
     "del": "^6.0.0",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-terser": "^2.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.0",
