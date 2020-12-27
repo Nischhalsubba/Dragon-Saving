@@ -1,0 +1,42 @@
+.arrow {
+  // color: #0c5449;
+  background-color: transparent;
+  margin: 1em 0;
+  text-decoration: none;
+
+  &::after {
+    display: inline-block;
+    padding-left: 8px;
+    content: "\0279E"; // arrow right unicode
+    -webkit-transition: transform 0.3s ease-out;
+    -moz-transition: transform 0.3s ease-out;
+    -ms-transition: transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+  }
+
+  &:hover {
+    &::after {
+      -webkit-transform: translateX(4px);
+      -moz-transform: translateX(4px);
+      -ms-transform: translateX(4px);
+      -o-transform: translateX(4px);
+      transform: translateX(4px);
+    }
+  }
+}
+
+// Button colors
+.btn_dark {
+  color: $dark;
+}
+
+.btn_orange {
+  color: $primary;
+}
+
+// Normal button
+.button_normal {
+  font-size: 16px;
+  line-height: 28px;
+}

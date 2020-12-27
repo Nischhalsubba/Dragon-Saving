@@ -17,7 +17,7 @@ body {
 }
 
 h4 {
-    background: $color_background-hr;
+    // background: $color_background-hr;
 }
 
 /*--------------------------------------------------------------
@@ -76,4 +76,27 @@ img {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+}
+
+.section_heading {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 45px;
+}
+
+// Glide Js overwrite
+.glide__arrow {
+    &--left {
+        left: -6rem !important;
+    }
+
+    &--right {
+        right: -6rem !important;
+    }
+}
+
+.glide__bullet--active {
+    background-color: #fbac26 !important;
+    width: 25px !important;
+    border-radius: 4px !important;
 }

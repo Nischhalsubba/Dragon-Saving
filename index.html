@@ -100,7 +100,7 @@
 
             <hr>
 
-            <a href="#">Learn More ></a>
+            <a href="#" class="arrow button_normal btn_dark">Learn More</a>
         </div>
 
         <div class="introduction_right">
@@ -157,28 +157,56 @@
 
     <div class="ourServices container">
         <!-- Image Carousel -->
-        <h3>Our services</h3>
+        <h3 class="section_heading">Our services</h3>
         <div class="glide glideservice">
             <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
                     <li class="glide__slide">
                         <img src="https://images.unsplash.com/photo-1462206092226-f46025ffe607?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1953&q=80"
                             alt="">
-                        <h4>Term Deposit</h4>
-                        <p>
+                        <h4 class="title">Term Deposit</h4>
+                        <p class="content">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia ipsum et vel? Vero
                             repellendus illum magni velit dicta quis nisi, consectetur, numquam corporis nulla libero.
                             Perferendis quisquam inventore voluptas, explicabo ipsum ea eaque, tenetur accusantium amet
                             numquam quas illo? Ad.
                         </p>
+                        <a href="#" class="arrow button_normal btn_orange">Read More</a>
                     </li>
                     <li class="glide__slide"><img
                             src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"
-                            alt=""></li>
+                            alt="">
+                        <h4 class="title">Term Deposit</h4>
+                        <p class="content">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia ipsum et vel? Vero
+                            repellendus illum magni velit dicta quis nisi, consectetur, numquam corporis nulla libero.
+                            Perferendis quisquam inventore voluptas, explicabo ipsum ea eaque, tenetur accusantium amet
+                            numquam quas illo? Ad.
+                        </p>
+                        <a href="#" class="arrow button_normal btn_orange">Read More</a>
+                    </li>
                     <li class="glide__slide"><img
                             src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                            alt=""></li>
+                            alt="">
+                        <h4 class="title">Term Deposit</h4>
+                        <p class="content">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia ipsum et vel? Vero
+                            repellendus illum magni velit dicta quis nisi, consectetur, numquam corporis nulla libero.
+                            Perferendis quisquam inventore voluptas, explicabo ipsum ea eaque, tenetur accusantium amet
+                            numquam quas illo? Ad.
+                        </p>
+                        <a href="#" class="arrow button_normal btn_orange">Read More</a>
+                    </li>
                 </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+            </div>
+            <div class="glide__bullets bullets_services" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
             </div>
         </div>
     </div>
@@ -245,9 +273,6 @@
 
     <script>
         new Glide('.glide').mount()
-        // new Glide('.glideservice').mount()
-
-        // new Glide('.glide_hero').mount()
     </script>
 
 </body>
