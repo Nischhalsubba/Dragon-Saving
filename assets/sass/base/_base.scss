@@ -14,6 +14,8 @@ body {
     background: $background-body;
     text-rendering: optimizeSpeed;
     font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 
 h4 {
@@ -78,14 +80,48 @@ img {
     margin-left: auto;
 }
 
+.container-fluid {
+    max-width: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .section_heading {
     font-weight: bold;
     font-size: 32px;
     line-height: 45px;
 }
 
+.bg-lightBlue {
+    background-color: $ultralightgray;
+}
+
+
+
 // Glide Js overwrite
 .glide__arrow {
+
+    width: 32px !important;
+    height: 32px !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 50% !important;
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 991.98px) {
+        display: none !important;
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.8) !important;
+
+    }
+
     &--left {
         left: -6rem !important;
     }

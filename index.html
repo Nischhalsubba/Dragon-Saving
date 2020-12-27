@@ -7,7 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Theme Stylesheet -->
-    <link rel="stylesheet" href="./dest/css/style.css?cb=1608993904145">
+    <link rel="stylesheet" href="./dest/style.css?cb=1609065045707">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
 
     <!-- Linking google font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
@@ -30,7 +35,7 @@
             </div>
         </div>
 
-        <nav class="nav">
+        <!-- <nav class="nav">
             <ul class="nav_container">
                 <li><a href="" class="nav_item">Home</a></li>
                 <li><a href="" class="nav_item">About Us</a></li>
@@ -52,7 +57,31 @@
                 <li><a href="" class="nav_item">News</a></li>
                 <li><a href="" class="nav_item">Contact Us</a></li>
             </ul>
-        </nav>
+        </nav> -->
+
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active nav_item">Home</a>
+            <a href="#about-us" class="nav_item">About Us</a>
+            <a href="#message" class="nav_item">Message</a>
+            <div class="dropdown">
+                <button class="dropbtn nav_item">Services
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <a href="#reports" class="nav_item">Reports</a>
+            <a href="#notices" class="nav_item">Notices</a>
+            <a href="#gallery" class="nav_item">Gallery</a>
+            <a href="#downloads" class="nav_item">Downloads</a>
+            <a href="#news" class="nav_item">News</a>
+            <a href="#contactus" class="nav_item">Contact Us</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+
     </header>
 
     <div class="hero carousel container">
@@ -72,8 +101,10 @@
                 </ul>
             </div>
             <div class="glide__arrows" data-glide-el="controls">
-                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i
+                        class="fas fa-angle-left"></i></button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i
+                        class="fas fa-angle-right"></i></button>
             </div>
             <div class="glide__bullets" data-glide-el="controls[nav]">
                 <button class="glide__bullet" data-glide-dir="=0"></button>
@@ -205,45 +236,52 @@
                 </ul>
             </div>
             <div class="glide__arrows" data-glide-el="controls">
-                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i
+                        class="fas fa-angle-left"></i></button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i
+                        class="fas fa-angle-right"></i></button>
             </div>
             <div class="glide__bullets bullets_services" data-glide-el="controls[nav]">
                 <button class="glide__bullet" data-glide-dir="=0"></button>
                 <button class="glide__bullet" data-glide-dir="=1"></button>
                 <button class="glide__bullet" data-glide-dir="=2"></button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-lightBlue">
+
+        <div class="advertisement container">
+            <!-- Image carousel for advertisement -->
+            <div class="glide glideadvertisement ">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <img src="https://images.unsplash.com/photo-1462206092226-f46025ffe607?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1953&q=80"
+                                alt="" height="400px">
+                        </li>
+                        <li class="glide__slide"><img
+                                src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"
+                                alt="" height="400px"></li>
+                        <li class="glide__slide"><img
+                                src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                                alt="" height="400px"></li>
+                    </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i
+                            class="fas fa-angle-left"></i></button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i
+                            class="fas fa-angle-right"></i></button>
+                </div>
+                <div class="glide__bullets bullets_services" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="advertisement container">
-        <!-- Image carousel for advertisement -->
-        <div class="glide glideadvertisement ">
-            <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides">
-                    <li class="glide__slide">
-                        <img src="https://images.unsplash.com/photo-1462206092226-f46025ffe607?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1953&q=80"
-                            alt="" height="400px">
-                    </li>
-                    <li class="glide__slide"><img
-                            src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"
-                            alt="" height="400px"></li>
-                    <li class="glide__slide"><img
-                            src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                            alt="" height="400px"></li>
-                </ul>
-            </div>
-            <div class="glide__arrows" data-glide-el="controls">
-                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
-            </div>
-            <div class="glide__bullets bullets_services" data-glide-el="controls[nav]">
-                <button class="glide__bullet" data-glide-dir="=0"></button>
-                <button class="glide__bullet" data-glide-dir="=1"></button>
-                <button class="glide__bullet" data-glide-dir="=2"></button>
-            </div>
-        </div>
-    </div>
 
     <div class="container">
         <!-- Two div section with image and descriptiion -->
@@ -254,7 +292,8 @@
                 <img src="https://d2ct9xspam8wud.cloudfront.net/blog/2020/08/25174343/Ad-Example-Bank-Aljazira-600x418.jpg"
                     alt="">
                 <h4 class="title">SAMRIDDHA NARI BACHAT YOJANA</h4>
-                <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the
                     industry's standard dummy text ever since the 1500s</p>
             </div>
 
@@ -262,29 +301,93 @@
                 <img src="https://d2ct9xspam8wud.cloudfront.net/blog/2020/08/27104654/beneficial_bank_revolving-debt-1-448x600.jpg"
                     alt="">
                 <h4 class="title">MOBILE BANKING</h4>
-                <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the
                     industry's standard dummy text ever since the 1500s</p>
             </div>
         </div>
 
     </div>
+    <div class="container-fluid bg-lightBlue">
+        <div class="events container">
+            <!-- Two div section with Remmitance and news & events -->
+            <div class="remmittance">
+                <h3 class="section_heading">Remmittance</h3>
 
-    <div class="events container">
-        <!-- Two div section with Remmitance and news & events -->
-        <div class="remmittance">
-            <img src="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                alt="">
-        </div>
-        <div class="news">
-            <div class="news_content">
-                <h5>Five years of relentless 'Oli-fication'</h5>
-                <span>December 20</span>
+                <img src="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                    alt="">
+            </div>
+            <div class="news">
+                <h3 class="section_heading">News</h3>
+
+                <div class="news_content">
+                    <h5 class="title">Five years of relentless 'Oli-fication' Five years of relentless 'Oli-fication'
+                        Five years of relentless 'Oli-fication'</h5>
+                    <span class="text-muted">December 20</span>
+                    <hr>
+                </div>
+
+                <div class="news_content">
+                    <h5 class="title">Five years of relen'</h5>
+                    <span class="text-muted">December 20</span>
+                    <hr>
+                </div>
+
+                <div class="news_content">
+                    <h5 class="title">
+                        Five years of relentless 'Oli-fication'</h5>
+                    <span class="text-muted">December 20</span>
+                    <hr>
+                </div>
+
+                <div class="news_content">
+                    <h5 class="title">Five years of relentleion'</h5>
+                    <span class="text-muted">December 20</span>
+                    <hr>
+                </div>
             </div>
         </div>
     </div>
 
-    <footer class="footer">
+
+    <footer class="container-fluid">
         <!-- Three column layout with logo, useful links, address -->
+        <div class="footer container">
+            <div class="logo">
+                <img src="" alt="">
+                <h3 class="">LOGO</h3>
+            </div>
+
+            <div class="company_info">
+                <div class="links">
+
+                    <h4 class="section_heading text_white">Useful links</h4>
+                    <ul>
+                        <li><a href="#"> https://www.nrb.org.np/</a></li>
+                        <li>
+                            <a href="#"> https://mof.gov.np/en/ </a></li>
+                        <li>
+                            <a href="#"> www.ncdb.org.np</a></li>
+                        <li>
+                            <a href="#"> www.deoc.gov.np </a></li>
+                        <li>
+                            <a href="#"> http://ncfnepal.com.np </a> </li>
+                    </ul>
+                </div>
+                <div class="address ">
+                    <h4 class="section_heading text_white">Address</h4>
+
+                    <p>Dharan, Nepal</p>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="container credit">
+            <div class="border"></div>
+            <span class="copyright">© 2020 Copyright Dragon Saving and Credit Co-operative Society Ltd. All Rights
+                Reserved. </span>
+        </div>
     </footer>
 
     <!-- Javascript -->
@@ -293,7 +396,7 @@
 
 
     <script>
-        new Glide('.glide').mount()
+        // new Glide('.glide').mount()
     </script>
 
 </body>

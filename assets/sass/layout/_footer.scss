@@ -1,0 +1,53 @@
+footer {
+  background-color: $accent;
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px !important;
+
+    .logo {
+      width: 40%;
+    }
+
+    .company_info {
+      width: 60%;
+      display: flex;
+      justify-content: space-around;
+
+      .links {
+        li {
+          font-size: 12px;
+          line-height: 28px;
+
+          a {
+            text-decoration: none;
+            color: $white;
+
+            &:hover {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+
+    .address {
+      font-size: 14px;
+      color: $white;
+    }
+  }
+
+  .credit {
+    .border {
+      height: 1px;
+      background-color: $white;
+    }
+
+    .copyright {
+      font-size: 14px;
+      color: $white;
+
+    }
+  }
+}

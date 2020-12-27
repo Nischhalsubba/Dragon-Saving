@@ -32,7 +32,7 @@ function scssTask() {
         .pipe(sass())
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(sourcemaps.write('.'))
-        .pipe(dest('./dest/css/'));
+        .pipe(dest('./dest/'));
 }
 
 // JS task

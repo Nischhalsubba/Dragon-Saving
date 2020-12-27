@@ -1,7 +1,11 @@
 // Hero Section
 .glide_hero {
-  max-height: 550px;
-  overflow: hidden;
+  .glide__track .glide__slides .glide__slide img {
+    max-height: 550px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    overflow: hidden;
+  }
 }
 
 // Introdution Section
@@ -9,17 +13,25 @@
   display: flex;
   position: relative;
 
+  @media screen and (max-width: 991.98px) {
+    flex-direction: column;
+  }
+
   &_left {
     // background-color: $gray;
     background: rgba(0, 0, 0, 0.07);
     width: 60%;
     padding: 64px 84px 64px 64px;
 
+    @media screen and (max-width: 991.98px) {
+      width: 100%;
+    }
 
     .subtitle {
       font-size: 14px;
       color: $light_blue;
       font-weight: 700;
+      letter-spacing: 1px;
     }
 
     .title {
@@ -45,12 +57,22 @@
     top: 20%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 40px rgba(0, 0, 0, 0.07);
 
+    @media screen and (max-width: 991.98px) {
+      position: relative;
+    }
+
     img {
       max-width: 650px;
       max-height: 450px;
       height: 300px;
       width: 500px;
       object-fit: cover;
+
+      @media screen and (max-width: 991.98px) {
+        width: 100%;
+        max-width: 100%;
+      }
+
     }
   }
 }
@@ -96,6 +118,7 @@
       font-size: 14px;
       color: $light_blue;
       font-weight: 700;
+      letter-spacing: 1px;
     }
 
     .content {
@@ -136,9 +159,6 @@
 
 // Advertisement 
 .advertisement {
-  // max-height: 400px;
-  overflow: hidden;
-
   img {
     max-height: 400px;
     object-fit: cover;
@@ -151,11 +171,20 @@
 .currentOffer {
   display: flex;
 
+  @media screen and (max-width: 991.98px) {
+    flex-direction: column;
+  }
+
   &_box {
     img {
       width: 500px;
       height: 400px;
       object-fit: cover;
+
+      @media screen and (max-width: 991.98px) {
+        width: 100%;
+        object-fit: cover;
+      }
     }
 
     .title {
@@ -169,6 +198,59 @@
       font-size: 16px;
       line-height: 28px;
       color: $light_blue;
+    }
+  }
+}
+
+// events
+.events {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media screen and (max-width: 991.98px) {
+    flex-direction: column;
+  }
+
+  .remmittance {
+    img {
+      width: 550px;
+      height: auto;
+      object-fit: cover;
+
+      @media screen and (max-width: 991.98px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .news {
+    max-width: 40%;
+
+    @media screen and (max-width: 991.98px) {
+      max-width: 100%;
+    }
+
+    &_content {
+      .title {
+        font-size: 20px;
+        line-height: 30px;
+        color: $dark;
+        margin: 0px;
+        margin-bottom: 4px;
+      }
+
+      .text-muted {
+        color: $light_blue;
+        font-size: 12px;
+        line-height: 22px;
+        margin: 0px;
+      }
+
+      hr {
+        color: #c4c4c4;
+        opacity: 0.2;
+      }
     }
   }
 }
