@@ -98,5 +98,7 @@ img {
 .glide__bullet--active {
     background-color: #fbac26 !important;
     width: 25px !important;
+    height: 9px !important;
     border-radius: 4px !important;
+    border: 2px solid transparent;
 }
