@@ -77,3 +77,20 @@ blockquote {
 .text_white {
     color: $white;
 }
+
+.badge-success {
+    color: $dark;
+    background-color: $accent;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-weight: 500;
+    text-transform: uppercase !important;
+    margin: 5px 10px 5px 0;
+    line-height: 1;
+    letter-spacing: .5px;
+    text-decoration: none;
+}

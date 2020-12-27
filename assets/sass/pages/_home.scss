@@ -85,6 +85,10 @@
   background: $ultralightgray;
   padding: 64px 32px;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
   &_contain {
     display: flex;
     flex-direction: column;
