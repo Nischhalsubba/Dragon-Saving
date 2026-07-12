@@ -21,4 +21,15 @@ jobs:
       - name: Reconstruct verified update
         run: |
           cat .site-update/chunk-* | tr -d '\n' | xxd -r -p > /tmp/dragon-bilingual-update.tar.gz
-         
+          echo "c0d2e61cf34bcf9b456ec7672a677370db36c8fb38704547d26aa3a2a00f6d9f  /tmp/dragon-bilingual-update.tar.gz" | sha256sum -c -
+          tar -xzf /tmp/dragon-bilingual-update.tar.gz -C .
+          rm -rf .site-update
+          rm -f .github/workflows/apply-bilingual-update.yml
+
+      - name: Commit bilingual experience
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Add English and Nepali language experience"
+          git push origin master
