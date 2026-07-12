@@ -1,17 +1,17 @@
 {
-  "name": "Dragon Saving",
-  "short_name": "Dragon Saving",
-  "description": "A playful browser-local savings tracker concept.",
+  "name": "Dragon Savings and Credit Cooperative Limited",
+  "short_name": "Dragon Savings",
+  "description": "Savings, loan, remittance and digital member services from Bafal, Kalanki, Kathmandu.",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#071814",
-  "theme_color": "#071814",
+  "background_color": "#f7f4ec",
+  "theme_color": "#0f4f42",
   "icons": [
     {
-      "src": "favicon.svg",
+      "src": "https://dragonsaving.com.np/wp-content/uploads/2021/01/dragon-logo-small.png",
       "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
