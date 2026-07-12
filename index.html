@@ -1,90 +1,775 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-language="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0d493b" />
+    <meta name="theme-color" content="#173f2f" />
     <meta
       name="description"
       content="Dragon Savings explains savings, loans, remittance and everyday financial services in plain language."
+      data-i18n-content="metaDescription"
     />
-    <meta property="og:title" content="Dragon Savings and Credit Cooperative Limited" />
+    <meta
+      property="og:title"
+      content="Dragon Savings and Credit Cooperative Limited"
+      data-i18n-content="pageTitle"
+    />
     <meta
       property="og:description"
       content="Start with your goal. We help explain the next step in plain language."
+      data-i18n-content="ogDescription"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://nischhalsubba.github.io/Dragon-Saving/" />
-    <link rel="canonical" href="https://nischhalsubba.github.io/Dragon-Saving/" />
+    <meta
+      property="og:url"
+      content="https://nischhalsubba.github.io/Dragon-Saving/"
+    />
+    <link
+      rel="canonical"
+      href="https://nischhalsubba.github.io/Dragon-Saving/"
+    />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
-    <title>Dragon Savings and Credit Cooperative Limited</title>
+    <title data-i18n="pageTitle">
+      Dragon Savings and Credit Cooperative Limited
+    </title>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to main content</a>
+    <a class="skip-link" href="#main" data-i18n="skipToContent"
+      >Skip to main content</a
+    >
+
     <div class="utility">
       <div class="shell">
-        <span>Serving Bafal, Kalanki since 2066 B.S.</span
-        ><a href="tel:015314491">01&#8209;5314491</a>
+        <span data-i18n="utilityMessage"
+          >Serving Bafal, Kalanki since 2066 B.S.</span
+        >
+        <a href="tel:015314491">01&#8209;5314491</a>
       </div>
     </div>
+
     <header class="header">
       <div class="shell header-row">
-        <a class="brand" href="#home" aria-label="Dragon Savings home">
-          <img src="https://dragonsaving.com.np/wp-content/uploads/2021/01/dragon-logo-small.png" alt="Dragon Savings logo" width="64" height="64" />
-          <span><strong>Dragon Savings</strong><small>and Credit Cooperative Limited</small></span>
+        <a
+          class="brand"
+          href="#home"
+          aria-label="Dragon Savings home"
+          data-i18n-aria-label="brandHomeLabel"
+        >
+          <img
+            src="https://dragonsaving.com.np/wp-content/uploads/2021/01/dragon-logo-small.png"
+            alt="Dragon Savings logo"
+            data-i18n-alt="brandLogoAlt"
+            width="64"
+            height="64"
+          />
+          <span>
+            <strong>Dragon Savings</strong>
+            <small data-i18n="companyDescriptor"
+              >and Credit Cooperative Limited</small
+            >
+          </span>
         </a>
-        <nav class="desktop-nav" aria-label="Primary navigation">
-          <a href="#start">Start here</a><a href="#services">Services</a><a href="#visit">First visit</a><a href="#about">About</a><a href="#contact">Contact</a>
+
+        <nav
+          class="desktop-nav"
+          aria-label="Primary navigation"
+          data-i18n-aria-label="primaryNavigationLabel"
+        >
+          <a href="#start" data-i18n="navStart">Start here</a>
+          <a href="#services" data-i18n="navServices">Services</a>
+          <a href="#visit" data-i18n="navFirstVisit">First visit</a>
+          <a href="#about" data-i18n="navAbout">About</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
         </nav>
-        <a class="header-call" href="tel:015314491">Call for guidance</a>
-        <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-menu-button><span></span><span></span><span></span></button>
+
+        <div class="header-tools">
+          <div
+            class="language-switch"
+            role="group"
+            aria-label="Choose language"
+            data-i18n-aria-label="languageSwitchLabel"
+          >
+            <button type="button" data-language-option="en" aria-pressed="true">
+              EN
+            </button>
+            <button
+              type="button"
+              data-language-option="ne"
+              aria-pressed="false"
+            >
+              नेपाली
+            </button>
+          </div>
+          <a
+            class="header-call"
+            href="tel:015314491"
+            data-i18n="callForGuidance"
+          >
+            Call for guidance
+          </a>
+          <button
+            class="menu-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open menu"
+            data-menu-button
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
-      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" data-mobile-menu hidden>
-        <a href="#start">Start here</a><a href="#services">Services</a><a href="#visit">First visit</a><a href="#about">About</a><a href="#contact">Contact</a><a href="tel:015314491">Call 01&#8209;5314491</a>
+
+      <nav
+        class="mobile-menu"
+        id="mobile-menu"
+        aria-label="Mobile navigation"
+        data-i18n-aria-label="mobileNavigationLabel"
+        data-mobile-menu
+        hidden
+      >
+        <a href="#start" data-i18n="navStart">Start here</a>
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#visit" data-i18n="navFirstVisit">First visit</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+        <a href="tel:015314491" data-i18n="mobileCall">Call 01-5314491</a>
       </nav>
     </header>
+
     <main id="main" tabindex="-1">
       <section class="hero" id="home" aria-labelledby="hero-title">
         <div class="shell hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Community finance, explained clearly</p>
-            <h1 id="hero-title">Tell us what you need. We will help you find where to start.</h1>
-            <p class="lede">You do not need to know financial terminology. Choose your goal, understand the important questions, and speak with a real person before deciding.</p>
-            <div class="actions"><a class="button primary" href="#start">Choose your goal</a><a class="button secondary" href="tel:015314491">Talk to our team</a></div>
+            <p class="eyebrow" data-i18n="heroEyebrow">
+              Community finance, explained clearly
+            </p>
+            <h1 id="hero-title" data-i18n="heroTitle">
+              Tell us what you need. We will help you find where to start.
+            </h1>
+            <p class="lede" data-i18n="heroDescription">
+              You do not need to know financial terminology. Choose your goal,
+              understand the important questions, and speak with a real person
+              before deciding.
+            </p>
+            <div class="actions">
+              <a class="button primary" href="#start" data-i18n="chooseGoal"
+                >Choose your goal</a
+              >
+              <a
+                class="button secondary"
+                href="tel:015314491"
+                data-i18n="talkToTeam"
+              >
+                Talk to our team
+              </a>
+            </div>
           </div>
-          <aside class="identity" aria-label="Dragon Savings identity">
-            <div class="identity-logo"><img src="https://dragonsaving.com.np/wp-content/uploads/2021/01/dragon-logo-small.png" alt="" width="170" height="170" /></div>
-            <p>Dragon Savings and Credit Cooperative Limited</p>
-            <dl><div><dt>Operating since</dt><dd>2066 B.S. / 2009</dd></div><div><dt>Office</dt><dd>Bafal-14, Kalanki</dd></div></dl>
+
+          <aside
+            class="identity"
+            aria-label="Dragon Savings identity"
+            data-i18n-aria-label="identityLabel"
+          >
+            <div class="identity-logo">
+              <img
+                src="https://dragonsaving.com.np/wp-content/uploads/2021/01/dragon-logo-small.png"
+                alt=""
+                width="170"
+                height="170"
+              />
+            </div>
+            <p data-i18n="officialCompanyName">
+              Dragon Savings and Credit Cooperative Limited
+            </p>
+            <dl>
+              <div>
+                <dt data-i18n="operatingSince">Operating since</dt>
+                <dd>2066 B.S. / 2009</dd>
+              </div>
+              <div>
+                <dt data-i18n="office">Office</dt>
+                <dd data-i18n="officeLocationShort">Bafal-14, Kalanki</dd>
+              </div>
+            </dl>
           </aside>
         </div>
       </section>
+
       <section class="start" id="start" aria-labelledby="start-title">
         <div class="shell">
-          <div class="section-head centered"><p class="eyebrow">Start here</p><h2 id="start-title">What would you like help with today?</h2><p>Choose the sentence closest to your situation. No product knowledge required.</p></div>
-          <div class="goals">
-            <a class="goal" href="#saving"><b>01</b><div><small>I want to</small><strong>Save money</strong><em lang="ne">म बचत गर्न चाहन्छु</em><p>Build a habit, prepare for a child, or save for a future goal.</p></div><i aria-hidden="true">→</i></a>
-            <a class="goal" href="#loans"><b>02</b><div><small>I need to</small><strong>Borrow money</strong><em lang="ne">मलाई ऋण चाहिएको छ</em><p>Ask about education, a home, business, agriculture or equipment.</p></div><i aria-hidden="true">→</i></a>
-            <a class="goal" href="#transfer"><b>03</b><div><small>I want to</small><strong>Send, receive or pay</strong><em lang="ne">पैसा पठाउन वा लिन</em><p>Check remittance, mobile banking, SMS alerts and payments.</p></div><i aria-hidden="true">→</i></a>
+          <div class="section-head centered">
+            <p class="eyebrow" data-i18n="startEyebrow">Start here</p>
+            <h2 id="start-title" data-i18n="startTitle">
+              What would you like help with today?
+            </h2>
+            <p data-i18n="startDescription">
+              Choose the sentence closest to your situation. No product
+              knowledge required.
+            </p>
           </div>
-          <div class="unsure"><p><strong>Still unsure?</strong> Describe your goal in ordinary words. You do not need a product name.</p><a href="tel:015314491">Call 01&#8209;5314491</a></div>
+
+          <div class="goals">
+            <a class="goal" href="#saving">
+              <b>01</b>
+              <div>
+                <small data-i18n="goalSavePrefix">I want to</small>
+                <strong data-i18n="goalSaveTitle">Save money</strong>
+                <p data-i18n="goalSaveDescription">
+                  Build a habit, prepare for a child, or save for a future goal.
+                </p>
+              </div>
+              <i aria-hidden="true">→</i>
+            </a>
+
+            <a class="goal" href="#loans">
+              <b>02</b>
+              <div>
+                <small data-i18n="goalLoanPrefix">I need to</small>
+                <strong data-i18n="goalLoanTitle">Borrow money</strong>
+                <p data-i18n="goalLoanDescription">
+                  Ask about education, a home, business, agriculture or
+                  equipment.
+                </p>
+              </div>
+              <i aria-hidden="true">→</i>
+            </a>
+
+            <a class="goal" href="#transfer">
+              <b>03</b>
+              <div>
+                <small data-i18n="goalTransferPrefix">I want to</small>
+                <strong data-i18n="goalTransferTitle"
+                  >Send, receive or pay</strong
+                >
+                <p data-i18n="goalTransferDescription">
+                  Check remittance, mobile banking, SMS alerts and payments.
+                </p>
+              </div>
+              <i aria-hidden="true">→</i>
+            </a>
+          </div>
+
+          <div class="unsure">
+            <p>
+              <strong data-i18n="unsureTitle">Still unsure?</strong>
+              <span data-i18n="unsureDescription">
+                Describe your goal in ordinary words. You do not need a product
+                name.
+              </span>
+            </p>
+            <a href="tel:015314491" data-i18n="callOffice">Call 01-5314491</a>
+          </div>
         </div>
       </section>
-      <section class="facts" aria-label="Verified cooperative information"><div class="shell facts-grid"><div><span>Since</span><strong>2066 B.S.</strong><small>Operating since 2009</small></div><div><span>Registration</span><strong>3486/066/067</strong><small>Division Cooperative Office</small></div><div><span>PAN</span><strong>600309422</strong><small>Official registration detail</small></div><div><span>Location</span><strong>Bafal-14</strong><small>Kalanki, Kathmandu</small></div></div></section>
-      <section class="visit" id="visit" aria-labelledby="visit-title"><div class="shell visit-grid"><div><p class="eyebrow light">New to cooperatives?</p><h2 id="visit-title">Your first visit can be simple.</h2><p>Begin with what you are trying to achieve. The team can explain the choices and current requirements.</p></div><ol><li><span>1</span><div><h3>Explain your goal</h3><p>Use ordinary words, such as “I want to save for my child.”</p></div></li><li><span>2</span><div><h3>Ask for the full picture</h3><p>Ask about documents, rates, fees, withdrawal rules and repayment dates.</p></div></li><li><span>3</span><div><h3>Decide after everything is clear</h3><p>Read the terms and keep agreements, receipts and statements.</p></div></li></ol></div></section>
-      <section class="services" id="services" aria-labelledby="services-title"><div class="shell"><div class="section-head"><div><p class="eyebrow">Services in plain language</p><h2 id="services-title">Start with your purpose, not a financial term.</h2></div><p>Current rates, eligibility, documents and availability must be confirmed directly with the cooperative.</p></div><div class="service-list">
-        <details id="saving" open><summary><b>01</b><span><small>Saving</small><strong>Keep money for everyday life or a future goal</strong><em lang="ne">बचत सेवा</em></span><i aria-hidden="true"></i></summary><div class="service-body"><div><h3>Saving may be a starting point when you want to:</h3><ul><li>build a regular saving habit</li><li>prepare for a child or family goal</li><li>save for women, senior citizens or travel</li><li>keep money for an agreed period</li></ul><div class="advice"><strong>Ask before opening an account</strong><p>What is the minimum balance, current rate, withdrawal rule and required document?</p></div></div><div class="directory"><h3>Common options</h3><a href="https://dragonsaving.com.np/service/saving/daily-saving/" target="_blank" rel="noopener noreferrer"><span>Daily Savings</span><small>Regular saving habit</small></a><a href="https://dragonsaving.com.np/service/saving/bal-bhabisya-bachat-yojana/" target="_blank" rel="noopener noreferrer"><span>Bal Bhabisya Bachat</span><small>For a child’s future</small></a><a href="https://dragonsaving.com.np/service/saving/samriddha-nari-bachat-yojana/" target="_blank" rel="noopener noreferrer"><span>Samriddha Nari Bachat</span><small>For women members</small></a><a class="directory-cta" href="tel:015314491">Ask about saving</a></div></div></details>
-        <details id="loans"><summary><b>02</b><span><small>Loans</small><strong>Borrow for an eligible, clearly understood purpose</strong><em lang="ne">ऋण सेवा</em></span><i aria-hidden="true"></i></summary><div class="service-body"><div><h3>A loan may be considered for eligible needs such as:</h3><ul><li>education or a home</li><li>business or agriculture</li><li>women-led enterprise</li><li>a vehicle or equipment purchase</li></ul><div class="advice"><strong>Ask before applying</strong><p>What is the total repayment, rate, fee, security, instalment and late-payment consequence?</p></div></div><div class="directory"><h3>Loan purposes</h3><a href="https://dragonsaving.com.np/service/loan-schemes/dragon-business-loan/" target="_blank" rel="noopener noreferrer"><span>Business Loan</span><small>Eligible business needs</small></a><a href="https://dragonsaving.com.np/service/loan-schemes/dragon-educational-loan/" target="_blank" rel="noopener noreferrer"><span>Educational Loan</span><small>Eligible education expenses</small></a><a href="https://dragonsaving.com.np/service/loan-schemes/dragon-home-loan/" target="_blank" rel="noopener noreferrer"><span>Home Loan</span><small>Eligible home needs</small></a><a class="directory-cta" href="tel:015314491">Ask about eligibility</a></div></div></details>
-        <details id="transfer"><summary><b>03</b><span><small>Transfer and payments</small><strong>Send, receive or manage everyday payments</strong><em lang="ne">रेमिट्यान्स तथा भुक्तानी</em></span><i aria-hidden="true"></i></summary><div class="service-body"><div><h3>Listed services include:</h3><ul><li>eSewa Money Transfer</li><li>MoneyGram and Western Union</li><li>Samsara Remit</li><li>mobile banking, SMS alerts and utility payments</li></ul><div class="advice"><strong>Call before travelling</strong><p>Provider availability and identification requirements can change.</p></div></div><div class="transfer-box"><p class="eyebrow light">Quickest next step</p><h3>Confirm the provider and required identification first.</h3><a class="button yellow" href="tel:015314491">Call 01&#8209;5314491</a></div></div></details>
-      </div></div></section>
-      <section class="questions" aria-labelledby="questions-title"><div class="shell questions-grid"><div><p class="eyebrow">Before you agree</p><h2 id="questions-title">Four questions every customer should ask.</h2><p>You are allowed to pause, ask again and compare before deciding.</p></div><ol><li><b>01</b><div><h3>What will this cost or return in total?</h3><p>Ask about rates, fees and the complete amount.</p></div></li><li><b>02</b><div><h3>When can I access the money?</h3><p>Understand withdrawal and maturity conditions.</p></div></li><li><b>03</b><div><h3>What happens if I am late?</h3><p>Ask about penalties and extra interest.</p></div></li><li><b>04</b><div><h3>Which documents should I keep?</h3><p>Keep agreements, receipts and statements.</p></div></li></ol></div></section>
-      <section class="about" id="about" aria-labelledby="about-title"><div class="shell about-grid"><div class="seal"><img src="https://dragonsaving.com.np/wp-content/uploads/2021/01/dragon-logo-small.png" alt="" width="170" height="170" loading="lazy" /><span>Community rooted<br />since 2009</span></div><div><p class="eyebrow">About Dragon Savings</p><h2 id="about-title">A local savings and credit cooperative in Kathmandu.</h2><p>Dragon Savings and Credit Cooperative Limited is a primary-level, single-purpose savings and credit cooperative operating since 2066 B.S. and registered through the Division Cooperative Office, Kathmandu.</p><dl><div><dt>Registration</dt><dd>3486/066/067</dd></div><div><dt>PAN</dt><dd>600309422</dd></div><div><dt>Location</dt><dd>Bafal-14, Kalanki</dd></div></dl></div></div></section>
-      <section class="contact" id="contact" aria-labelledby="contact-title"><div class="shell contact-grid"><div><p class="eyebrow light">Need a human explanation?</p><h2 id="contact-title">Tell us your goal in ordinary words.</h2><p>You do not need to know the product name first.</p></div><div class="contact-list"><a href="tel:015314491"><span>Office phone</span><strong>01&#8209;5314491</strong></a><a href="tel:9851278098"><span>Mobile</span><strong>9851278098</strong></a><a href="mailto:info@dragonsaving.com.np"><span>Email</span><strong>info@dragonsaving.com.np</strong></a><a href="https://maps.google.com/?q=Kathmandu-14+Bafal+Kalanki" target="_blank" rel="noopener noreferrer"><span>Visit</span><strong>Bafal-14, Kalanki</strong></a></div></div></section>
+
+      <section
+        class="facts"
+        aria-label="Verified cooperative information"
+        data-i18n-aria-label="factsLabel"
+      >
+        <div class="shell facts-grid">
+          <div>
+            <span data-i18n="factSince">Since</span>
+            <strong>2066 B.S.</strong>
+            <small data-i18n="factSinceDescription">Operating since 2009</small>
+          </div>
+          <div>
+            <span data-i18n="factRegistration">Registration</span>
+            <strong>3486/066/067</strong>
+            <small data-i18n="factRegistrationDescription"
+              >Division Cooperative Office</small
+            >
+          </div>
+          <div>
+            <span>PAN</span>
+            <strong>600309422</strong>
+            <small data-i18n="factPanDescription"
+              >Official registration detail</small
+            >
+          </div>
+          <div>
+            <span data-i18n="factLocation">Location</span>
+            <strong>Bafal-14</strong>
+            <small data-i18n="factLocationDescription"
+              >Kalanki, Kathmandu</small
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="visit" id="visit" aria-labelledby="visit-title">
+        <div class="shell visit-grid">
+          <div>
+            <p class="eyebrow light" data-i18n="visitEyebrow">
+              New to cooperatives?
+            </p>
+            <h2 id="visit-title" data-i18n="visitTitle">
+              Your first visit can be simple.
+            </h2>
+            <p data-i18n="visitDescription">
+              Begin with what you are trying to achieve. The team can explain
+              the choices and current requirements.
+            </p>
+          </div>
+          <ol>
+            <li>
+              <span>1</span>
+              <div>
+                <h3 data-i18n="visitStepOneTitle">Explain your goal</h3>
+                <p data-i18n="visitStepOneDescription">
+                  Use ordinary words, such as “I want to save for my child.”
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>2</span>
+              <div>
+                <h3 data-i18n="visitStepTwoTitle">Ask for the full picture</h3>
+                <p data-i18n="visitStepTwoDescription">
+                  Ask about documents, rates, fees, withdrawal rules and
+                  repayment dates.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>3</span>
+              <div>
+                <h3 data-i18n="visitStepThreeTitle">
+                  Decide after everything is clear
+                </h3>
+                <p data-i18n="visitStepThreeDescription">
+                  Read the terms and keep agreements, receipts and statements.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="services" id="services" aria-labelledby="services-title">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow" data-i18n="servicesEyebrow">
+                Services in plain language
+              </p>
+              <h2 id="services-title" data-i18n="servicesTitle">
+                Start with your purpose, not a financial term.
+              </h2>
+            </div>
+            <p data-i18n="servicesDescription">
+              Current rates, eligibility, documents and availability must be
+              confirmed directly with the cooperative.
+            </p>
+          </div>
+
+          <div class="service-list">
+            <details id="saving" open>
+              <summary>
+                <b>01</b>
+                <span>
+                  <small data-i18n="savingCategory">Saving</small>
+                  <strong data-i18n="savingTitle">
+                    Keep money for everyday life or a future goal
+                  </strong>
+                </span>
+                <i aria-hidden="true"></i>
+              </summary>
+              <div class="service-body">
+                <div>
+                  <h3 data-i18n="savingUseTitle">
+                    Saving may be a starting point when you want to:
+                  </h3>
+                  <ul>
+                    <li data-i18n="savingUseOne">
+                      build a regular saving habit
+                    </li>
+                    <li data-i18n="savingUseTwo">
+                      prepare for a child or family goal
+                    </li>
+                    <li data-i18n="savingUseThree">
+                      save for women, senior citizens or travel
+                    </li>
+                    <li data-i18n="savingUseFour">
+                      keep money for an agreed period
+                    </li>
+                  </ul>
+                  <div class="advice">
+                    <strong data-i18n="savingAdviceTitle"
+                      >Ask before opening an account</strong
+                    >
+                    <p data-i18n="savingAdviceDescription">
+                      What is the minimum balance, current rate, withdrawal rule
+                      and required document?
+                    </p>
+                  </div>
+                </div>
+                <div class="directory">
+                  <h3 data-i18n="commonOptions">Common options</h3>
+                  <a
+                    href="https://dragonsaving.com.np/service/saving/daily-saving/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span data-i18n="dailySavingsName">Daily Savings</span>
+                    <small data-i18n="dailySavingsDescription"
+                      >Regular saving habit</small
+                    >
+                  </a>
+                  <a
+                    href="https://dragonsaving.com.np/service/saving/bal-bhabisya-bachat-yojana/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span data-i18n="childSavingsName"
+                      >Bal Bhabisya Bachat</span
+                    >
+                    <small data-i18n="childSavingsDescription"
+                      >For a child’s future</small
+                    >
+                  </a>
+                  <a
+                    href="https://dragonsaving.com.np/service/saving/samriddha-nari-bachat-yojana/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span data-i18n="womenSavingsName"
+                      >Samriddha Nari Bachat</span
+                    >
+                    <small data-i18n="womenSavingsDescription"
+                      >For women members</small
+                    >
+                  </a>
+                  <a
+                    class="directory-cta"
+                    href="tel:015314491"
+                    data-i18n="askAboutSaving"
+                  >
+                    Ask about saving
+                  </a>
+                </div>
+              </div>
+            </details>
+
+            <details id="loans">
+              <summary>
+                <b>02</b>
+                <span>
+                  <small data-i18n="loanCategory">Loans</small>
+                  <strong data-i18n="loanTitle">
+                    Borrow for an eligible, clearly understood purpose
+                  </strong>
+                </span>
+                <i aria-hidden="true"></i>
+              </summary>
+              <div class="service-body">
+                <div>
+                  <h3 data-i18n="loanUseTitle">
+                    A loan may be considered for eligible needs such as:
+                  </h3>
+                  <ul>
+                    <li data-i18n="loanUseOne">education or a home</li>
+                    <li data-i18n="loanUseTwo">business or agriculture</li>
+                    <li data-i18n="loanUseThree">women-led enterprise</li>
+                    <li data-i18n="loanUseFour">
+                      a vehicle or equipment purchase
+                    </li>
+                  </ul>
+                  <div class="advice">
+                    <strong data-i18n="loanAdviceTitle"
+                      >Ask before applying</strong
+                    >
+                    <p data-i18n="loanAdviceDescription">
+                      What is the total repayment, rate, fee, security,
+                      instalment and late-payment consequence?
+                    </p>
+                  </div>
+                </div>
+                <div class="directory">
+                  <h3 data-i18n="loanPurposes">Loan purposes</h3>
+                  <a
+                    href="https://dragonsaving.com.np/service/loan-schemes/dragon-business-loan/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span data-i18n="businessLoanName">Business Loan</span>
+                    <small data-i18n="businessLoanDescription"
+                      >Eligible business needs</small
+                    >
+                  </a>
+                  <a
+                    href="https://dragonsaving.com.np/service/loan-schemes/dragon-educational-loan/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span data-i18n="educationLoanName">Educational Loan</span>
+                    <small data-i18n="educationLoanDescription"
+                      >Eligible education expenses</small
+                    >
+                  </a>
+                  <a
+                    href="https://dragonsaving.com.np/service/loan-schemes/dragon-home-loan/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span data-i18n="homeLoanName">Home Loan</span>
+                    <small data-i18n="homeLoanDescription"
+                      >Eligible home needs</small
+                    >
+                  </a>
+                  <a
+                    class="directory-cta"
+                    href="tel:015314491"
+                    data-i18n="askAboutEligibility"
+                  >
+                    Ask about eligibility
+                  </a>
+                </div>
+              </div>
+            </details>
+
+            <details id="transfer">
+              <summary>
+                <b>03</b>
+                <span>
+                  <small data-i18n="transferCategory"
+                    >Transfer and payments</small
+                  >
+                  <strong data-i18n="transferTitle">
+                    Send, receive or manage everyday payments
+                  </strong>
+                </span>
+                <i aria-hidden="true"></i>
+              </summary>
+              <div class="service-body">
+                <div>
+                  <h3 data-i18n="transferListTitle">
+                    Listed services include:
+                  </h3>
+                  <ul>
+                    <li>eSewa Money Transfer</li>
+                    <li data-i18n="transferProviderTwo">
+                      MoneyGram and Western Union
+                    </li>
+                    <li>Samsara Remit</li>
+                    <li data-i18n="transferProviderFour">
+                      mobile banking, SMS alerts and utility payments
+                    </li>
+                  </ul>
+                  <div class="advice">
+                    <strong data-i18n="transferAdviceTitle"
+                      >Call before travelling</strong
+                    >
+                    <p data-i18n="transferAdviceDescription">
+                      Provider availability and identification requirements can
+                      change.
+                    </p>
+                  </div>
+                </div>
+                <div class="transfer-box">
+                  <p class="eyebrow light" data-i18n="quickestNextStep">
+                    Quickest next step
+                  </p>
+                  <h3 data-i18n="transferNextStep">
+                    Confirm the provider and required identification first.
+                  </h3>
+                  <a
+                    class="button yellow"
+                    href="tel:015314491"
+                    data-i18n="callOffice"
+                  >
+                    Call 01-5314491
+                  </a>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="questions" aria-labelledby="questions-title">
+        <div class="shell questions-grid">
+          <div>
+            <p class="eyebrow" data-i18n="questionsEyebrow">Before you agree</p>
+            <h2 id="questions-title" data-i18n="questionsTitle">
+              Four questions every customer should ask.
+            </h2>
+            <p data-i18n="questionsDescription">
+              You are allowed to pause, ask again and compare before deciding.
+            </p>
+          </div>
+          <ol>
+            <li>
+              <b>01</b>
+              <div>
+                <h3 data-i18n="questionOneTitle">
+                  What will this cost or return in total?
+                </h3>
+                <p data-i18n="questionOneDescription">
+                  Ask about rates, fees and the complete amount.
+                </p>
+              </div>
+            </li>
+            <li>
+              <b>02</b>
+              <div>
+                <h3 data-i18n="questionTwoTitle">
+                  When can I access the money?
+                </h3>
+                <p data-i18n="questionTwoDescription">
+                  Understand withdrawal and maturity conditions.
+                </p>
+              </div>
+            </li>
+            <li>
+              <b>03</b>
+              <div>
+                <h3 data-i18n="questionThreeTitle">
+                  What happens if I am late?
+                </h3>
+                <p data-i18n="questionThreeDescription">
+                  Ask about penalties and extra interest.
+                </p>
+              </div>
+            </li>
+            <li>
+              <b>04</b>
+              <div>
+                <h3 data-i18n="questionFourTitle">
+                  Which documents should I keep?
+                </h3>
+                <p data-i18n="questionFourDescription">
+                  Keep agreements, receipts and statements.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="shell about-grid">
+          <div class="seal">
+            <img
+              src="https://dragonsaving.com.np/wp-content/uploads/2021/01/dragon-logo-small.png"
+              alt=""
+              width="170"
+              height="170"
+              loading="lazy"
+            />
+            <span>
+              <span data-i18n="communityRooted">Community rooted</span>
+              <small data-i18n="since2009">since 2009</small>
+            </span>
+          </div>
+          <div>
+            <p class="eyebrow" data-i18n="aboutEyebrow">About Dragon Savings</p>
+            <h2 id="about-title" data-i18n="aboutTitle">
+              A local savings and credit cooperative in Kathmandu.
+            </h2>
+            <p data-i18n="aboutDescription">
+              Dragon Savings and Credit Cooperative Limited is a primary-level,
+              single-purpose savings and credit cooperative operating since 2066
+              B.S. and registered through the Division Cooperative Office,
+              Kathmandu.
+            </p>
+            <dl>
+              <div>
+                <dt data-i18n="factRegistration">Registration</dt>
+                <dd>3486/066/067</dd>
+              </div>
+              <div>
+                <dt>PAN</dt>
+                <dd>600309422</dd>
+              </div>
+              <div>
+                <dt data-i18n="factLocation">Location</dt>
+                <dd data-i18n="officeLocationShort">Bafal-14, Kalanki</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="shell contact-grid">
+          <div>
+            <p class="eyebrow light" data-i18n="contactEyebrow">
+              Need a human explanation?
+            </p>
+            <h2 id="contact-title" data-i18n="contactTitle">
+              Tell us your goal in ordinary words.
+            </h2>
+            <p data-i18n="contactDescription">
+              You do not need to know the product name first.
+            </p>
+          </div>
+          <div class="contact-list">
+            <a href="tel:015314491">
+              <span data-i18n="officePhone">Office phone</span>
+              <strong>01&#8209;5314491</strong>
+            </a>
+            <a href="tel:9851278098">
+              <span data-i18n="mobilePhone">Mobile</span>
+              <strong>9851278098</strong>
+            </a>
+            <a href="mailto:info@dragonsaving.com.np">
+              <span data-i18n="email">Email</span>
+              <strong>info@dragonsaving.com.np</strong>
+            </a>
+            <a
+              href="https://maps.google.com/?q=Kathmandu-14+Bafal+Kalanki"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span data-i18n="visitUs">Visit</span>
+              <strong data-i18n="officeLocationShort">Bafal-14, Kalanki</strong>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer><div class="shell footer-grid"><div class="footer-brand"><img src="https://dragonsaving.com.np/wp-content/uploads/2021/01/dragon-logo-small.png" alt="Dragon Savings logo" width="58" height="58" loading="lazy" /><strong>Dragon Savings</strong></div><p>Introductory information only. Confirm current rates, eligibility, documents and terms directly with the cooperative.</p><p>&copy; <span data-year></span> Dragon Savings.</p></div></footer>
-    <nav class="mobile-actions" aria-label="Quick actions"><a href="tel:015314491">Call</a><a href="#start">Start here</a><a href="https://maps.google.com/?q=Kathmandu-14+Bafal+Kalanki" target="_blank" rel="noopener noreferrer">Directions</a></nav>
+
+    <footer>
+      <div class="shell footer-grid">
+        <div class="footer-brand">
+          <img
+            src="https://dragonsaving.com.np/wp-content/uploads/2021/01/dragon-logo-small.png"
+            alt="Dragon Savings logo"
+            data-i18n-alt="brandLogoAlt"
+            width="58"
+            height="58"
+            loading="lazy"
+          />
+          <strong>Dragon Savings</strong>
+        </div>
+        <p data-i18n="footerDisclaimer">
+          Introductory information only. Confirm current rates, eligibility,
+          documents and terms directly with the cooperative.
+        </p>
+        <p>&copy; <span data-year></span> Dragon Savings.</p>
+      </div>
+    </footer>
+
+    <nav
+      class="mobile-actions"
+      aria-label="Quick actions"
+      data-i18n-aria-label="quickActionsLabel"
+    >
+      <a href="tel:015314491" data-i18n="mobileActionCall">Call</a>
+      <a href="#start" data-i18n="mobileActionStart">Start here</a>
+      <a
+        href="https://maps.google.com/?q=Kathmandu-14+Bafal+Kalanki"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-i18n="mobileActionDirections"
+      >
+        Directions
+      </a>
+    </nav>
   </body>
 </html>
