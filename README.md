@@ -1,43 +1,59 @@
-# Dragon Savings Redesign
+# Dragon Savings Website Redesign
 
-A modern responsive redesign concept for **Dragon Savings and Credit Cooperative Limited**, using the organisation's official logo, public service information, registration details, chairman's message and contact information from its live website.
+A modern, accessible static website for **Dragon Savings and Credit Cooperative Limited**, based on the organisation's public website content and official logo.
 
-## Live sites
+## Design goal
 
-- Redesign: https://nischhalsubba.github.io/Dragon-Saving/
-- Current organisation website: https://dragonsaving.com.np/
+The site is designed for first-time visitors who may not be financially educated. Instead of beginning with product terminology, it starts with three simple needs:
+
+1. I want to save.
+2. I need a loan.
+3. I want to send or receive money.
+
+The interface then explains relevant services in plain language, includes Nepali support labels for key choices, and repeatedly directs visitors to confirm current rates, eligibility, documents and terms with the cooperative.
 
 ## Included
 
 - Official Dragon Savings logo
-- Cooperative profile and registration information
-- Saving, loan, remittance and digital-service sections
-- Popular saving schemes
-- Chairman Raju Kumar Rai's message
-- Office, phone, email and social links
-- Responsive navigation
-- Accessible service tabs with keyboard controls
+- Responsive, mobile-first layout
+- Plain-language service navigator
+- Savings, loan, remittance and digital-service categories
+- English content with selective Nepali support labels
+- Cooperative history and registration information
+- Chairman's message
+- Contact details and social links
+- Keyboard-accessible tabs and navigation
 - Reduced-motion support and visible focus states
-- No framework or build step
+- Mobile quick-action bar for calling, services and directions
 
-## Files
+## Content source
 
-| File | Purpose |
-|---|---|
-| `index.html` | Page structure and official public content |
-| `style.css` | Responsive visual system and component styles |
-| `app.js` | Navigation, tabs, reveal effects and back-to-top behavior |
-| `manifest.webmanifest` | Basic site metadata |
-| `.nojekyll` | Static GitHub Pages configuration |
+Public organisation details, service names, contact information and the logo were adapted from:
+
+https://dragonsaving.com.np/
+
+The redesign does not publish interest rates or promise eligibility because those details may change. Visitors are advised to confirm current terms directly with the cooperative.
 
 ## Run locally
+
+No build step is required.
 
 ```bash
 python -m http.server 8000
 ```
 
-Open `http://127.0.0.1:8000/`.
+Open:
 
-## Content note
+```text
+http://127.0.0.1:8000/
+```
 
-The redesign references public information and assets hosted by Dragon Savings and Credit Cooperative Limited. Current rates, eligibility, documentation and service availability should always be confirmed directly with the cooperative.
+## Files
+
+| File | Purpose |
+|---|---|
+| `index.html` | Page structure, content and accessible navigation |
+| `style.css` | Brand system, layouts, components and responsive states |
+| `app.js` | Service navigator, need selector, mobile menu and reveal states |
+| `manifest.webmanifest` | Basic site metadata |
+| `.nojekyll` | Static GitHub Pages configuration |
