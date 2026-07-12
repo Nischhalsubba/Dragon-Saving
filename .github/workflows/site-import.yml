@@ -20,7 +20,9 @@ jobs:
 
       - name: Reconstruct verified bundle
         run: |
-          cat .site-import/chunk-* | base64 --decode > /tmp/dragon-site.tar.gz
+          cat .site-import/chunk-* > /tmp/dragon-site.b64
+          cat .site-import/encoded-* | base64 --decode >> /tmp/dragon-site.b64
+          base64 --decode /tmp/dragon-site.b64 > /tmp/dragon-site.tar.gz
           tar -xzf /tmp/dragon-site.tar.gz -C .
           rm -rf .site-import
 
