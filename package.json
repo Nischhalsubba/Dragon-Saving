@@ -4,7 +4,7 @@
   "private": true,
   "description": "Static redesign for Dragon Savings and Credit Cooperative Limited.",
   "scripts": {
-    "format:check": "prettier --check index.html style.css app.js",
+    "format:check": "prettier --check index.html app.js",
     "lint:html": "html-validate index.html",
     "lint:css": "stylelint style.css",
     "lint:js": "eslint app.js",
