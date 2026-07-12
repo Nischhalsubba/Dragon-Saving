@@ -1,17 +1,9 @@
 {
   "name": "Dragon Savings and Credit Cooperative Limited",
   "short_name": "Dragon Savings",
-  "description": "Savings, loan, remittance and digital member services from Bafal, Kalanki, Kathmandu.",
+  "description": "Simple savings, loan, remittance and member-service information for Dragon Savings and Credit Cooperative Limited.",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#f7f4ec",
-  "theme_color": "#0f4f42",
-  "icons": [
-    {
-      "src": "https://dragonsaving.com.np/wp-content/uploads/2021/01/dragon-logo-small.png",
-      "sizes": "any",
-      "type": "image/png",
-      "purpose": "any"
-    }
-  ]
+  "background_color": "#fbf8ef",
+  "theme_color": "#0a4a3c"
 }
