@@ -1,0 +1,17 @@
+{
+  "name": "Dragon Saving",
+  "short_name": "Dragon Saving",
+  "description": "A playful browser-local savings tracker concept.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#071814",
+  "theme_color": "#071814",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
