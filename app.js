@@ -1,3 +1,10 @@
+/*
+ * Browser runtime for the Dragon Savings public website.
+ * Applies English/Nepali translations, manages the responsive menu and service
+ * accordions, opens linked service details, and keeps simple dynamic metadata
+ * such as the footer year in sync without external dependencies.
+ */
+
 (() => {
   "use strict";
 
@@ -328,10 +335,13 @@
   const languageButtons = document.querySelectorAll("[data-language-option]");
   let currentLanguage = "en";
 
-  const translate = (key) =>
-    translations[currentLanguage][key] ?? translations.en[key] ?? key;
+  /** Returns the active translation for a key, falling back to English and then the key itself. */
+  function translate(key) {
+    return translations[currentLanguage][key] ?? translations.en[key] ?? key;
+  }
 
-  const updateMenuLabel = () => {
+  /** Synchronizes the mobile menu button's accessible label with its open/closed state. */
+  function updateMenuLabel() {
     if (!menuButton || !mobileMenu) {
       return;
     }
@@ -341,63 +351,77 @@
       "aria-label",
       translate(isOpen ? "closeMenu" : "openMenu"),
     );
-  };
+  }
 
-  const applyLanguage = (language) => {
+  /** Replaces text content on one element that declares a data-i18n translation key. */
+  function applyTextTranslation(element) {
+    element.textContent = translate(element.dataset.i18n);
+  }
+
+  /** Replaces an element's aria-label from its data-i18n-aria-label translation key. */
+  function applyAriaTranslation(element) {
+    element.setAttribute("aria-label", translate(element.dataset.i18nAriaLabel));
+  }
+
+  /** Replaces an image alt value from its data-i18n-alt translation key. */
+  function applyAltTranslation(element) {
+    element.setAttribute("alt", translate(element.dataset.i18nAlt));
+  }
+
+  /** Replaces metadata content from its data-i18n-content translation key. */
+  function applyContentTranslation(element) {
+    element.setAttribute("content", translate(element.dataset.i18nContent));
+  }
+
+  /** Updates one language button so assistive technology can identify the selected language. */
+  function updateLanguageButtonState(button) {
+    const isSelected = button.dataset.languageOption === currentLanguage;
+    button.setAttribute("aria-pressed", String(isSelected));
+  }
+
+  /** Applies a supported language across visible text, accessible labels, metadata, and persisted preference. */
+  function applyLanguage(language) {
     currentLanguage = supportedLanguages.has(language) ? language : "en";
     document.documentElement.lang = currentLanguage;
     document.documentElement.dataset.language = currentLanguage;
 
-    document.querySelectorAll("[data-i18n]").forEach((element) => {
-      const key = element.dataset.i18n;
-      element.textContent = translate(key);
-    });
-
-    document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
-      const key = element.dataset.i18nAriaLabel;
-      element.setAttribute("aria-label", translate(key));
-    });
-
-    document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
-      const key = element.dataset.i18nAlt;
-      element.setAttribute("alt", translate(key));
-    });
-
-    document.querySelectorAll("[data-i18n-content]").forEach((element) => {
-      const key = element.dataset.i18nContent;
-      element.setAttribute("content", translate(key));
-    });
-
-    languageButtons.forEach((button) => {
-      const isSelected = button.dataset.languageOption === currentLanguage;
-      button.setAttribute("aria-pressed", String(isSelected));
-    });
+    document.querySelectorAll("[data-i18n]").forEach(applyTextTranslation);
+    document
+      .querySelectorAll("[data-i18n-aria-label]")
+      .forEach(applyAriaTranslation);
+    document.querySelectorAll("[data-i18n-alt]").forEach(applyAltTranslation);
+    document
+      .querySelectorAll("[data-i18n-content]")
+      .forEach(applyContentTranslation);
+    languageButtons.forEach(updateLanguageButtonState);
 
     updateMenuLabel();
 
     try {
       window.localStorage.setItem("dragon-language", currentLanguage);
     } catch {
-      // The language still works when browser storage is unavailable.
+      // Translation remains functional when browser storage is unavailable.
     }
-  };
+  }
 
-  const getInitialLanguage = () => {
+  /** Chooses the saved language when valid, otherwise falling back to the browser's language. */
+  function getInitialLanguage() {
     try {
       const storedLanguage = window.localStorage.getItem("dragon-language");
       if (storedLanguage && supportedLanguages.has(storedLanguage)) {
         return storedLanguage;
       }
     } catch {
-      // Fall back to the browser language when storage is unavailable.
+      // Browser language remains a safe fallback when storage is unavailable.
     }
 
     return window.navigator.language.toLowerCase().startsWith("ne")
       ? "ne"
       : "en";
-  };
+  }
 
-  const closeMenu = (returnFocus = false) => {
+  /** Closes the mobile menu and optionally returns keyboard focus to its trigger. */
+  function closeMenu(returnFocus = false) {
     if (!menuButton || !mobileMenu) {
       return;
     }
@@ -409,67 +433,111 @@
     if (returnFocus) {
       menuButton.focus();
     }
-  };
-
-  languageButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      applyLanguage(button.dataset.languageOption);
-    });
-  });
-
-  if (menuButton && mobileMenu) {
-    menuButton.addEventListener("click", () => {
-      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-      menuButton.setAttribute("aria-expanded", String(!isOpen));
-      mobileMenu.hidden = isOpen;
-      updateMenuLabel();
-    });
-
-    mobileMenu.addEventListener("click", (event) => {
-      if (event.target.closest("a")) {
-        closeMenu();
-      }
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && !mobileMenu.hidden) {
-        closeMenu(true);
-      }
-    });
-
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 900) {
-        closeMenu();
-      }
-    });
   }
 
-  document.querySelectorAll(".service-list details").forEach((item) => {
-    item.addEventListener("toggle", () => {
-      if (!item.open) {
-        return;
-      }
-
-      document.querySelectorAll(".service-list details").forEach((other) => {
-        if (other !== item) {
-          other.open = false;
-        }
-      });
-    });
-  });
-
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener("click", () => {
-      const target = document.querySelector(link.getAttribute("href"));
-      if (target && target.tagName === "DETAILS") {
-        target.open = true;
-      }
-    });
-  });
-
-  if (year) {
-    year.textContent = String(new Date().getFullYear());
+  /** Applies the language represented by the clicked language-switch button. */
+  function handleLanguageButtonClick(event) {
+    applyLanguage(event.currentTarget.dataset.languageOption);
   }
 
-  applyLanguage(getInitialLanguage());
+  /** Binds language selection behavior to a language-switch button. */
+  function bindLanguageButton(button) {
+    button.addEventListener("click", handleLanguageButtonClick);
+  }
+
+  /** Toggles the mobile navigation while keeping aria-expanded and its label synchronized. */
+  function handleMenuButtonClick() {
+    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+    menuButton.setAttribute("aria-expanded", String(!isOpen));
+    mobileMenu.hidden = isOpen;
+    updateMenuLabel();
+  }
+
+  /** Closes mobile navigation after the user activates a link within it. */
+  function handleMobileMenuClick(event) {
+    if (event.target.closest("a")) {
+      closeMenu();
+    }
+  }
+
+  /** Closes mobile navigation with Escape and restores focus to the menu trigger. */
+  function handleDocumentKeydown(event) {
+    if (event.key === "Escape" && !mobileMenu.hidden) {
+      closeMenu(true);
+    }
+  }
+
+  /** Resets the mobile menu when the viewport returns to the desktop navigation width. */
+  function handleViewportResize() {
+    if (window.innerWidth > 900) {
+      closeMenu();
+    }
+  }
+
+  /** Closes an open service detail unless it is the item the user just opened. */
+  function closeOtherServiceDetails(activeItem, otherItem) {
+    if (otherItem !== activeItem) {
+      otherItem.open = false;
+    }
+  }
+
+  /** Enforces one-open-at-a-time behavior inside the service accordion. */
+  function handleServiceToggle(event) {
+    const activeItem = event.currentTarget;
+    if (!activeItem.open) {
+      return;
+    }
+
+    document
+      .querySelectorAll(".service-list details")
+      .forEach(closeOtherServiceDetails.bind(null, activeItem));
+  }
+
+  /** Binds accordion behavior to one service details element. */
+  function bindServiceDetails(item) {
+    item.addEventListener("toggle", handleServiceToggle);
+  }
+
+  /** Opens a details target when a same-page link points directly to that service section. */
+  function handleHashLinkClick(event) {
+    const href = event.currentTarget.getAttribute("href");
+    if (!href || href === "#") {
+      return;
+    }
+
+    const target = document.querySelector(href);
+    if (target && target.tagName === "DETAILS") {
+      target.open = true;
+    }
+  }
+
+  /** Binds same-page service links so their details targets are opened before navigation. */
+  function bindHashLink(link) {
+    link.addEventListener("click", handleHashLinkClick);
+  }
+
+  /** Initializes all language, navigation, accordion, anchor, and footer-year behaviors. */
+  function initializeSite() {
+    languageButtons.forEach(bindLanguageButton);
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener("click", handleMenuButtonClick);
+      mobileMenu.addEventListener("click", handleMobileMenuClick);
+      document.addEventListener("keydown", handleDocumentKeydown);
+      window.addEventListener("resize", handleViewportResize);
+    }
+
+    document
+      .querySelectorAll(".service-list details")
+      .forEach(bindServiceDetails);
+    document.querySelectorAll('a[href^="#"]').forEach(bindHashLink);
+
+    if (year) {
+      year.textContent = String(new Date().getFullYear());
+    }
+
+    applyLanguage(getInitialLanguage());
+  }
+
+  initializeSite();
 })();
