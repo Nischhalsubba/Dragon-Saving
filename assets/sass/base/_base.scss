@@ -1,68 +1,64 @@
+/*
+ * Base element rules retained from the Dragon Savings Sass source.
+ * Establishes box sizing, document defaults, lists, media, tables, and code
+ * presentation before component-specific styling is applied.
+ */
+
 html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    background: $background-body;
-    text-rendering: optimizeSpeed;
+  background: $background-body;
+  text-rendering: optimizeSpeed;
 }
 
 h4 {
-    background: $color_background-hr;
+  background: $color-background-hr;
 }
 
-/*--------------------------------------------------------------
-# List
---------------------------------------------------------------*/
-
+/* Lists */
 ul,
 ol {
-    margin: 0%;
-    padding: 0;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 dt {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-//description Title
-
 img {
-    height: auto;
-    max-width: 100%;
-    vertical-align: center;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 table {
-    margin: 0;
+  margin: 0;
 
-    td,th{
-        padding: 12px 15px;
-        border-bottom: 1px solid $color-background-hr;
-        text-align: left;
-    }
+  td,
+  th {
+    padding: 12px 15px;
+    border-bottom: 1px solid $color-background-hr;
+    text-align: left;
+  }
 }
 
-code{
-    margin: 0 .2rem;
-    background: $color-background-hr;
-    border-radius: 4px;
-    display: block;
-}
-
-img{
-    display: block;
-
-    // Can be changed
-    width: 100%;
-    object-fit: contain;
+code {
+  display: block;
+  margin: 0 0.2rem;
+  background: $color-background-hr;
+  border-radius: 4px;
 }
