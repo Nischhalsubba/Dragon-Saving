@@ -22,5 +22,7 @@ jobs:
           node-version: 22
       - name: Install dependencies
         run: npm install --no-audit --no-fund
+      - name: Show formatting diff
+        run: npx prettier app.js | diff -u app.js - || true
       - name: Run quality checks
         run: npm run lint
