@@ -1,17 +1,19 @@
+/* Small alignment utilities retained by the Dragon Savings Sass source. */
+
 .alignLeft {
-    display: inline;
-    float: left;
+  display: inline;
+  float: left;
 }
 
 .alignRight {
-    display: inline;
-    float: right;
+  display: inline;
+  float: right;
 }
 
-.alignCenter{
-    @include centerBlock;
+.alignCenter {
+  @include centerBlock;
 }
 
-.textCenter{
-    text-align: center;
+.textCenter {
+  text-align: center;
 }
