@@ -360,7 +360,10 @@
 
   /** Replaces an element's aria-label from its data-i18n-aria-label translation key. */
   function applyAriaTranslation(element) {
-    element.setAttribute("aria-label", translate(element.dataset.i18nAriaLabel));
+    element.setAttribute(
+      "aria-label",
+      translate(element.dataset.i18nAriaLabel),
+    );
   }
 
   /** Replaces an image alt value from its data-i18n-alt translation key. */
