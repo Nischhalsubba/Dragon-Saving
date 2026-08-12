@@ -1,3 +1,5 @@
+/* Stylelint configuration for the maintained Dragon Savings stylesheet. */
+
 module.exports = {
   extends: ["stylelint-config-standard"],
   rules: {
@@ -7,6 +9,6 @@ module.exports = {
     "custom-property-pattern": null,
     "media-feature-range-notation": null,
     "no-descending-specificity": null,
-    "selector-class-pattern": null
-  }
+    "selector-class-pattern": null,
+  },
 };
