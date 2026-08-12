@@ -1,3 +1,5 @@
+/* ESLint configuration for the browser-side Dragon Savings runtime. */
+
 const js = require("@eslint/js");
 const globals = require("globals");
 
@@ -8,10 +10,10 @@ module.exports = [
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "script",
-      globals: globals.browser
+      globals: globals.browser,
     },
     rules: {
-      "no-console": "warn"
-    }
-  }
+      "no-console": "warn",
+    },
+  },
 ];
