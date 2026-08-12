@@ -1,3 +1,9 @@
+/*
+ * Production stylesheet for the Dragon Savings public website.
+ * Defines the bilingual typography, navigation, service content, responsive
+ * layouts, accessibility states, and mobile actions used by index.html.
+ */
+
 :root {
   --green: #2f6b44;
   --green-dark: #173f2f;
